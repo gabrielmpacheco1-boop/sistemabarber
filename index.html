@@ -565,13 +565,20 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 function getSlugFromHost() {
-  // Produção: slug.vercel.app → extrai slug
+  // 1º: query param ?barbearia=xxx (para teste e desenvolvimento)
+  const qsSlug = new URLSearchParams(window.location.search).get('barbearia');
+  if (qsSlug) return qsSlug;
+
+  // 2º: subdomínio (produção white-label: slug.vercel.app ou slug.dominio.com)
   const host = window.location.hostname;
   const parts = host.split('.');
-  if (parts.length >= 3) return parts[0];
-  // Dev local: ?barbearia=demo
-  const params = new URLSearchParams(window.location.search);
-  return params.get('barbearia') || 'demo';
+  // Ignora domínios reservados do Vercel (sistemabarber.vercel.app não é slug)
+  const vercelReserved = ['vercel', 'www', 'localhost'];
+  if (parts.length >= 3 && !vercelReserved.includes(parts[0])) {
+    return parts[0];
+  }
+
+  return 'demo';
 }
 
 // ─── STEP 1: SERVIÇOS ────────────────────────────────────
