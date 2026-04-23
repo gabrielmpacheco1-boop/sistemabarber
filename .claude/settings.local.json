@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:sistemabarber.vercel.app)",
+      "WebFetch(domain:play.google.com)"
+    ]
+  }
+}
