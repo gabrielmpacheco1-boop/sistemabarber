@@ -17,12 +17,12 @@
   --surface-3:  #1d2742;
   --border:     #1f2942;
   --border-hi:  #2a3559;
-  --primary:    #3b82f6;
-  --primary-2:  #2563eb;
-  --primary-3:  #1d4ed8;
-  --cyan:       #22d3ee;
-  --cyan-2:     #06b6d4;
-  --grad-blue:  linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+  --primary:    #e5e7eb;
+  --primary-2:  #d1d5db;
+  --primary-3:  #9ca3af;
+  --cyan:       #d1d5db;
+  --cyan-2:     #9ca3af;
+  --grad-blue:  linear-gradient(135deg, #f3f4f6 0%, #d1d5db 100%);
   --grad-purp:  linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
   --grad-pink:  linear-gradient(135deg, #ec4899 0%, #f43f5e 100%);
   --text:       #f1f5f9;
@@ -43,8 +43,8 @@
   --shadow-sm:  0 2px 8px rgba(0,0,0,.2);
   --shadow-md:  0 8px 24px rgba(0,0,0,.3);
   --shadow-lg:  0 20px 50px rgba(0,0,0,.4);
-  --shadow-blue: 0 10px 30px rgba(59,130,246,.35);
-  --shadow-blue-lg: 0 18px 50px rgba(59,130,246,.45);
+  --shadow-blue: 0 10px 30px rgba(229,231,235,.12);
+  --shadow-blue-lg: 0 18px 50px rgba(229,231,235,.18);
 
   --nav-h:      76px;
 }
@@ -86,8 +86,8 @@ input, textarea { -webkit-appearance: none; appearance: none; }
 #authScreen::before {
   content: ''; position: absolute; inset: 0;
   background:
-    radial-gradient(circle at 15% 20%, rgba(59,130,246,.25), transparent 40%),
-    radial-gradient(circle at 85% 80%, rgba(34,211,238,.2), transparent 40%);
+    radial-gradient(circle at 15% 20%, rgba(255,255,255,.25), transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(229,231,235,.2), transparent 40%);
   pointer-events: none;
 }
 .auth-box { width: 100%; max-width: 420px; position: relative; z-index: 1; }
@@ -98,7 +98,7 @@ input, textarea { -webkit-appearance: none; appearance: none; }
   background: var(--grad-blue);
   border-radius: 22px;
   display: grid; place-items: center;
-  color: #fff;
+  color: #0a0f1a;
   box-shadow: var(--shadow-blue-lg), inset 0 1px 0 rgba(255,255,255,.2);
   position: relative;
 }
@@ -135,7 +135,7 @@ input, textarea { -webkit-appearance: none; appearance: none; }
   border-radius: 10px; cursor: pointer; transition: color .2s;
   position: relative; z-index: 1;
 }
-.auth-tab.active { color: #fff; }
+.auth-tab.active { color: #0a0f1a; }
 .auth-tab-indicator {
   position: absolute; top: 5px; bottom: 5px;
   width: calc(50% - 5px); left: 5px;
@@ -175,7 +175,7 @@ input, textarea { -webkit-appearance: none; appearance: none; }
 .form-input-wrap .form-input { padding-left: 48px; }
 .form-input:focus {
   border-color: var(--primary);
-  box-shadow: 0 0 0 4px rgba(59,130,246,.12);
+  box-shadow: 0 0 0 4px rgba(255,255,255,.12);
   background: var(--surface-2);
 }
 .form-input::placeholder { color: var(--muted-2); }
@@ -190,7 +190,7 @@ input, textarea { -webkit-appearance: none; appearance: none; }
 }
 .btn-primary {
   background: var(--grad-blue);
-  color: #fff;
+  color: #0a0f1a;
   box-shadow: var(--shadow-blue);
   position: relative;
   overflow: hidden;
@@ -298,7 +298,7 @@ input, textarea { -webkit-appearance: none; appearance: none; }
 .chip.active {
   background: var(--grad-blue);
   border-color: transparent;
-  color: #fff;
+  color: #0a0f1a;
   box-shadow: var(--shadow-blue);
 }
 .chip .ic { width: 15px; height: 15px; }
@@ -314,8 +314,8 @@ input, textarea { -webkit-appearance: none; appearance: none; }
 
 /* ── Último agendamento (card premium) ── */
 .ultimo-card {
-  background: linear-gradient(135deg, rgba(59,130,246,.12), rgba(34,211,238,.06));
-  border: 1.5px solid rgba(59,130,246,.3);
+  background: linear-gradient(135deg, rgba(255,255,255,.12), rgba(229,231,235,.06));
+  border: 1.5px solid rgba(255,255,255,.3);
   border-radius: var(--radius-lg);
   padding: 16px;
   display: flex; align-items: center; gap: 14px;
@@ -325,7 +325,7 @@ input, textarea { -webkit-appearance: none; appearance: none; }
 }
 .ultimo-card::before {
   content: ''; position: absolute; inset: 0;
-  background: radial-gradient(ellipse at right, rgba(59,130,246,.15), transparent 60%);
+  background: radial-gradient(ellipse at right, rgba(255,255,255,.15), transparent 60%);
   pointer-events: none;
 }
 .ultimo-card:hover { border-color: var(--primary); transform: translateY(-1px); box-shadow: var(--shadow-blue); }
@@ -334,7 +334,7 @@ input, textarea { -webkit-appearance: none; appearance: none; }
   overflow: hidden; flex-shrink: 0;
   background: var(--grad-blue);
   display: grid; place-items: center;
-  color: #fff;
+  color: #0a0f1a;
   box-shadow: var(--shadow-md);
 }
 .ultimo-avatar img { width: 100%; height: 100%; object-fit: cover; }
@@ -403,7 +403,7 @@ input, textarea { -webkit-appearance: none; appearance: none; }
   overflow: hidden; position: relative;
   margin: 0 auto;
   display: grid; place-items: center;
-  color: #fff;
+  color: #0a0f1a;
   box-shadow: var(--shadow-md);
   border: 3px solid transparent;
   background-clip: padding-box;
@@ -452,7 +452,7 @@ input, textarea { -webkit-appearance: none; appearance: none; }
   overflow: hidden; flex-shrink: 0;
   background: var(--grad-blue);
   display: grid; place-items: center;
-  color: #fff;
+  color: #0a0f1a;
 }
 .barb-avatar img { width: 100%; height: 100%; object-fit: cover; }
 .barb-info { flex: 1; min-width: 0; }
@@ -469,7 +469,7 @@ input, textarea { -webkit-appearance: none; appearance: none; }
 }
 .badge-star { background: rgba(251,191,36,.12); color: var(--star); }
 .badge-star .ic { fill: currentColor; }
-.badge-dist { background: rgba(34,211,238,.12); color: var(--cyan); }
+.badge-dist { background: rgba(229,231,235,.12); color: var(--cyan); }
 .barb-cidade { color: var(--muted); font-size: 12px; margin-top: 4px; display: flex; align-items: center; gap: 4px; }
 .barb-cidade .ic { width: 12px; height: 12px; }
 
@@ -539,7 +539,7 @@ input, textarea { -webkit-appearance: none; appearance: none; }
   border: 4px solid var(--bg);
   overflow: hidden; flex-shrink: 0;
   display: grid; place-items: center;
-  color: #fff;
+  color: #0a0f1a;
   box-shadow: var(--shadow-lg);
 }
 .detalhe-logo img { width: 100%; height: 100%; object-fit: cover; }
@@ -576,7 +576,7 @@ input, textarea { -webkit-appearance: none; appearance: none; }
   border-radius: 10px; cursor: pointer; transition: color .2s;
   position: relative; z-index: 1;
 }
-.tab.active { color: #fff; }
+.tab.active { color: #0a0f1a; }
 .tab-indicator {
   position: absolute; top: 5px; bottom: 5px;
   background: var(--grad-blue);
@@ -599,14 +599,14 @@ input, textarea { -webkit-appearance: none; appearance: none; }
 }
 .servico-card:hover, .servico-card.selected {
   border-color: var(--primary);
-  background: linear-gradient(135deg, rgba(59,130,246,.08), transparent);
+  background: linear-gradient(135deg, rgba(255,255,255,.08), transparent);
   transform: translateY(-1px);
   box-shadow: var(--shadow-sm);
 }
 .servico-ic {
   width: 44px; height: 44px;
   border-radius: 12px;
-  background: rgba(59,130,246,.12);
+  background: rgba(255,255,255,.12);
   color: var(--primary);
   display: grid; place-items: center;
   flex-shrink: 0;
@@ -617,7 +617,7 @@ input, textarea { -webkit-appearance: none; appearance: none; }
 .servico-duracao .ic { width: 12px; height: 12px; }
 .servico-preco {
   background: var(--grad-blue);
-  color: #fff;
+  color: #0a0f1a;
   font-size: 14px; font-weight: 800;
   padding: 8px 14px; border-radius: 100px;
   box-shadow: var(--shadow-blue);
@@ -638,7 +638,7 @@ input, textarea { -webkit-appearance: none; appearance: none; }
 .barbeiro-item:hover { background: var(--surface); }
 .barbeiro-item.selected {
   border-color: var(--primary);
-  background: rgba(59,130,246,.08);
+  background: rgba(255,255,255,.08);
 }
 .barbeiro-avatar {
   width: 76px; height: 76px; border-radius: 50%;
@@ -682,7 +682,7 @@ input, textarea { -webkit-appearance: none; appearance: none; }
 .aval-comentario { font-size: 14px; color: var(--text); line-height: 1.6; margin-top: 8px; }
 .aval-resposta {
   margin-top: 12px; padding: 12px 14px;
-  background: rgba(59,130,246,.08);
+  background: rgba(255,255,255,.08);
   border-left: 3px solid var(--primary);
   border-radius: 8px;
   font-size: 13px; color: var(--text-2); line-height: 1.5;
@@ -712,11 +712,11 @@ input, textarea { -webkit-appearance: none; appearance: none; }
 }
 .cal-day:not(.disabled):not(.empty):hover { background: var(--surface-2); }
 .cal-day.selected {
-  background: var(--grad-blue); color: #fff; font-weight: 800;
+  background: var(--grad-blue); color: #0a0f1a; font-weight: 800;
   box-shadow: var(--shadow-blue);
 }
 .cal-day.today { color: var(--primary); font-weight: 800; border: 1.5px solid var(--primary); }
-.cal-day.selected.today { color: #fff; border-color: transparent; }
+.cal-day.selected.today { color: #0a0f1a; border-color: transparent; }
 .cal-day.disabled { opacity: .3; cursor: not-allowed; }
 .cal-day.empty { cursor: default; }
 
@@ -731,7 +731,7 @@ input, textarea { -webkit-appearance: none; appearance: none; }
 .hora-slot:hover { border-color: var(--primary); background: var(--surface-2); }
 .hora-slot.selected {
   background: var(--grad-blue); border-color: transparent;
-  color: #fff; box-shadow: var(--shadow-blue);
+  color: #0a0f1a; box-shadow: var(--shadow-blue);
 }
 
 /* ── Resumo ── */
@@ -773,7 +773,7 @@ input, textarea { -webkit-appearance: none; appearance: none; }
 .agend-logo {
   width: 44px; height: 44px; border-radius: 12px;
   background: var(--grad-blue);
-  display: grid; place-items: center; color: #fff;
+  display: grid; place-items: center; color: #0a0f1a;
   flex-shrink: 0; overflow: hidden;
 }
 .agend-logo img { width: 100%; height: 100%; object-fit: cover; }
@@ -798,14 +798,14 @@ input, textarea { -webkit-appearance: none; appearance: none; }
 }
 .status-confirmado { background: rgba(16,185,129,.15); color: var(--success); }
 .status-cancelado  { background: rgba(239,68,68,.15); color: var(--danger); }
-.status-concluido  { background: rgba(34,211,238,.15); color: var(--cyan); }
+.status-concluido  { background: rgba(229,231,235,.15); color: var(--cyan); }
 .agend-actions { display: flex; gap: 8px; margin-top: 12px; }
 .agend-actions > * { flex: 1; }
 
 /* ── Menu ── */
 .menu-perfil {
-  background: linear-gradient(135deg, rgba(59,130,246,.12), rgba(34,211,238,.06));
-  border: 1.5px solid rgba(59,130,246,.25);
+  background: linear-gradient(135deg, rgba(255,255,255,.12), rgba(229,231,235,.06));
+  border: 1.5px solid rgba(255,255,255,.25);
   border-radius: var(--radius-lg);
   padding: 20px;
   display: flex; align-items: center; gap: 16px;
@@ -815,7 +815,7 @@ input, textarea { -webkit-appearance: none; appearance: none; }
   width: 64px; height: 64px; border-radius: 20px;
   background: var(--grad-blue);
   display: grid; place-items: center;
-  font-size: 26px; font-weight: 800; color: #fff;
+  font-size: 26px; font-weight: 800; color: #0a0f1a;
   font-family: 'Manrope', sans-serif;
   box-shadow: var(--shadow-blue);
   flex-shrink: 0;
@@ -841,7 +841,7 @@ input, textarea { -webkit-appearance: none; appearance: none; }
 .menu-item:hover { background: var(--surface-2); }
 .menu-item-ic {
   width: 40px; height: 40px;
-  background: rgba(59,130,246,.12);
+  background: rgba(255,255,255,.12);
   color: var(--primary);
   border-radius: 12px;
   display: grid; place-items: center;
@@ -890,7 +890,7 @@ input, textarea { -webkit-appearance: none; appearance: none; }
   width: 36px; height: 3px;
   background: var(--grad-blue);
   border-radius: 0 0 4px 4px;
-  box-shadow: 0 4px 12px rgba(59,130,246,.6);
+  box-shadow: 0 4px 12px rgba(255,255,255,.6);
 }
 .nav-ic { display: grid; place-items: center; }
 .nav-label { font-size: 11px; font-weight: 700; letter-spacing: -.1px; }
@@ -1435,7 +1435,7 @@ async function fazerLogin() {
   erroEl.textContent = '';
   if (tel.length < 10) return erroEl.textContent = 'Telefone inválido';
   if (!senha) return erroEl.textContent = 'Informe a senha';
-  btn.disabled = true; btn.innerHTML = '<div class="spinner" style="width:18px;height:18px;border-color:rgba(255,255,255,.3);border-top-color:#fff"></div>';
+  btn.disabled = true; btn.innerHTML = '<div class="spinner" style="width:18px;height:18px;border-color:rgba(10,15,26,.2);border-top-color:#0a0f1a"></div>';
   try {
     session = await sbAuth('login', tel + EMAIL_SUFFIX, senha);
     localStorage.setItem('ab_session', JSON.stringify(session));
@@ -1459,7 +1459,7 @@ async function fazerCadastro() {
   if (nome.length < 3) return erroEl.textContent = 'Informe seu nome';
   if (tel.length < 10) return erroEl.textContent = 'Telefone inválido';
   if (senha.length < 6) return erroEl.textContent = 'Senha precisa ter 6+ caracteres';
-  btn.disabled = true; btn.innerHTML = '<div class="spinner" style="width:18px;height:18px;border-color:rgba(255,255,255,.3);border-top-color:#fff"></div>';
+  btn.disabled = true; btn.innerHTML = '<div class="spinner" style="width:18px;height:18px;border-color:rgba(10,15,26,.2);border-top-color:#0a0f1a"></div>';
   try {
     const signupData = await sbAuth('signup', tel + EMAIL_SUFFIX, senha);
     if (!signupData.access_token) {
@@ -1870,7 +1870,7 @@ async function confirmarAgendamento() {
   const erroEl = document.getElementById('erroAgendar');
   erroEl.textContent = '';
   btn.disabled = true;
-  btn.innerHTML = '<div class="spinner" style="border-color:rgba(255,255,255,.3);border-top-color:#fff"></div>';
+  btn.innerHTML = '<div class="spinner" style="border-color:rgba(10,15,26,.2);border-top-color:#0a0f1a"></div>';
   try {
     const dataHora = `${agendAtual.data}T${agendAtual.hora}:00`;
     const rows = await sb('agendamentos', {
